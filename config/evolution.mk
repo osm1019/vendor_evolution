@@ -1,5 +1,6 @@
 # Evolution X packages
 PRODUCT_PACKAGES += \
+    BatteryStatsViewer \
     EvoEgg
 
 ifeq ($(EVO_BUILD_TYPE),Official)
