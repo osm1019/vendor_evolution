@@ -13,16 +13,12 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+# Google Faceunlock
+include vendor/google/faceunlock/device.mk
 PRODUCT_PACKAGES += \
-    FaceUnlock
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.face.sense_service=true
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.hardware.biometrics.face.xml
-endif
+    SettingsGoogleFutureFaceEnroll
+PRODUCT_PACKAGES += \
+    PixelTrafficLightFaceOverlay
 
 # DeviceAsWebcam
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
